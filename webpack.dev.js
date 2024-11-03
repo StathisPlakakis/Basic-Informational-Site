@@ -10,7 +10,7 @@ module.exports = merge(common, {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 9000, // Or any port you prefer
-    open: true, // Automatically open the browser
+    port: 9000,
+    open: true, 
   },
 });
