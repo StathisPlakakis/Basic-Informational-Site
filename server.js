@@ -4,7 +4,7 @@ const path = require('path');
 const hostname = '127.0.0.1';
 const port = 2000;
 const server = http.createServer((req, res) => {
-  if (req.url === '/index.html' || req.url === '/') {
+  if (req.url === '/index' || req.url === '/') {
     fs.readFile(path.join(__dirname, 'dist/index.html'), (err, data) => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
         res.end();
       }
     });
-  } else if (req.url === '/about.html') {
+  } else if (req.url === '/about') {
     fs.readFile(path.join(__dirname, 'dist/about.html'), (err, data) => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
         res.end();
       }
     });
-  } else if (req.url === '/contact-me.html') {
+  } else if (req.url === '/contact-me') {
     fs.readFile(path.join(__dirname, 'dist/contact-me.html'), (err, data) => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
