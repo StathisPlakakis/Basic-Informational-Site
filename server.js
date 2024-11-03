@@ -1,8 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const hostname = '127.0.0.1';
-const port = 2000;
+const port = 8080;
 const server = http.createServer((req, res) => {
   if (req.url === '/index' || req.url === '/') {
     fs.readFile(path.join(__dirname, 'dist/index.html'), (err, data) => {
@@ -49,6 +48,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(port, hostname, () => {
-  console.log(`The server is running at http://${hostname}:${port}`);
-});
+server.listen(8080);
